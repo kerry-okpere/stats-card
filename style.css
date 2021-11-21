@@ -69,6 +69,9 @@ li > span:last-child{
 
 @media (min-width:961px) {
   /* 1440px is the required with for the test but i used 961px */
+  body {
+    padding: 0px 40px;
+  }
   .container{
     flex-direction: row;
     text-align: left;
