@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+body {
+  background:hsl(233, 47%, 7%);
+  display: flex;
+  height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  font-family: 'Inter', sans-serif;
+  overflow: scroll;
+}
+.container{
+  background: hsl(244, 38%, 16%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 400px;
+  text-align: center;
+}
+.box-1{
+  order: 2;
+  padding: 24px;
+}
+.box-2{
+  order: 1;
+
+  height: 200px;
+  background:url('./images/image-header-desktop.jpg') hsl(277, 64%, 61%);
+  background-size:cover;
+  background-blend-mode: multiply;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  padding: 12px 0px;
+  font-size: x-large;
+  font-weight: 700;
+  line-height: 28px;
+}
+h1 > span{
+  color: hsl(277, 64%, 61%);
+}
+p {
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 24px;
+  font-size: small;
+  padding: 8px 0px 26px;
+}
+li {
+  padding: 8px 0px;
+}
+li > span{
+  display: block;
+}
+li > span:first-child{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 4px 0px;
+}
+li > span:last-child{
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 4px 0px;
+  font-size: x-small;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (min-width:961px) {
+  /* 1440px is the required with for the test but i used 961px */
+  .container{
+    flex-direction: row;
+    text-align: left;
+    max-width: 800px;
+  }
+  .box-1{
+    order: 1;
+    padding: 42px;
+    width: 50%;
+  }
+  .box-2{
+    height: 330px;
+    /* this height might not be the best approach but it works for now  */
+    width: 50%;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  li:nth-child(2) {
+    padding: 0 40px;
+  }
+}
